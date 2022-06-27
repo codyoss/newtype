@@ -1,15 +1,12 @@
 package newtype
 
-import (
-	"github.com/codyoss/newtype/pb"
-)
+import "github.com/codyoss/orgtype"
 
 func NewSomething() *Something {
 	return &Something{}
 }
-
 type Something struct{}
 
-func (s *Something) AMethod(_ *pb.AType) pb.AnotherType {
-	return pb.AnotherType{}
+func (s *Something) AMethod(_ *orgtype.AType) orgtype.AnotherType {
+	return orgtype.AnotherType{}
 }
